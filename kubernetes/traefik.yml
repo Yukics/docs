@@ -12,7 +12,7 @@ spec:
     match: Host(`docs.yukics.net`)
     services:
     - kind: Service
-      name: docs-service
+      name: docs-nginx-service
       namespace: docs
       passHostHeader: true
       port: 90
