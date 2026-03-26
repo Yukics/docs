@@ -22,7 +22,7 @@ spec:
         - name: docs-storage
           mountPath: /public
         - name: nginx-config-volume
-          mountPath: /tmp/custom
+          mountPath: /tmp/custom/quartz.config.ts
           subPath: quartz.config.ts
         envFrom:
         - configMapRef:
