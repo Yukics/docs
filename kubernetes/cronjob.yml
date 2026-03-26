@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: docs-backup-cron
+spec:
+  schedule: "0 2 * * *"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: build-docs
+            image: docker.io/yukics/quartz-job:20260326
+            volumeMounts:
+            - name: docs-storage
+              mountPath: /public
+            envFrom:
+            - configMapRef:
+                name: docs-config          
+          restartPolicy: OnFailure
+          volumes:
+          - name: docs-storage
+            persistentVolumeClaim:
+              claimName: docs-pvc

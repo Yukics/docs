@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - cronjob.yml
+  - deploy.yml
+  - pvc.yml
+  - service.yml
+  - traefik.yml
+
+configMapGenerator:
+  - name: docs-config
+    literals:
+      - DOCS_REPO_URL=https://github.com/Yukics/docs
+      - DOCS_REPO_BRANCH=main
+      - DOCS_REPO_PATH=/docs2
+      - QUARTZ_REPO_URL=https://github.com/jackyzha0/quartz
+      - QUARTZ_REPO_BRANCH=v4
+      - QUARTZ_REPO_PATH=/quartz
+      - QUARTZ_REPO_BUILD=/public
+
+# commonLabels:
+#   variant: base
+#   managed-by: kustomize
