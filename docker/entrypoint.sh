@@ -11,6 +11,9 @@ export QUARTZ_REPO_URL="https://github.com/jackyzha0/quartz"
 export QUARTZ_REPO_BRANCH="v4"
 export QUARTZ_REPO_PATH="/workspaces/quartz"
 
+rm -rf $DOCS_REPO_PATH
+rm -rf $QUARTZ_REPO_PATH
+
 git clone --branch "$DOCS_REPO_BRANCH" "$DOCS_REPO_URL" $DOCS_REPO_PATH
 git clone --branch "$QUARTZ_REPO_BRANCH" "$QUARTZ_REPO_URL" $QUARTZ_REPO_PATH
 
