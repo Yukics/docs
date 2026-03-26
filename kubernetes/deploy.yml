@@ -17,6 +17,7 @@ spec:
       initContainers:
       - name: build-docs
         image: docker.io/yukics/quartz-job:20260326
+        imagePullPolicy: Always
         volumeMounts:
         - name: docs-storage
           mountPath: /public
