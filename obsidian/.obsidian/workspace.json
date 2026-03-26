@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Kubernetes/otra prueba.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "otra prueba"
             }
           }
         ],
@@ -214,13 +214,14 @@
   },
   "active": "6171426736fbe2af",
   "lastOpenFiles": [
+    "Kubernetes/certificates.md",
+    "Kubernetes/otra prueba.md",
+    "index.md",
     "Kubernetes/authorization.md",
     "Linux/Arch/test.md",
     "Linux/Arch/index.md",
     "Kubernetes/etcd.md",
-    "Kubernetes/certificates.md",
     "assets/templates/template.md",
-    "index.md",
     "GCP",
     "Linux/Arch as.md",
     "Linux/Arch",
