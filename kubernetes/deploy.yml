@@ -32,6 +32,7 @@ spec:
         volumeMounts:
         - name: docs-storage
           mountPath: /usr/share/nginx/html
+          subPath: html
       volumes:
       - name: docs-storage
         persistentVolumeClaim:
