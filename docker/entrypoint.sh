@@ -23,5 +23,6 @@ git clone --branch "$QUARTZ_REPO_BRANCH" "$QUARTZ_REPO_URL" "$QUARTZ_REPO_PATH"
 
 # Instalación y Build
 cd "$QUARTZ_REPO_PATH"
+rm -rf "${QUARTZ_REPO_BUILD:?}"/* 2>/dev/null || true
 npm install
 npx quartz build -d "$DOCS_REPO_PATH/obsidian" -o "$QUARTZ_REPO_BUILD"
