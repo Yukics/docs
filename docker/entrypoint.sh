@@ -8,7 +8,7 @@ export DOCS_REPO_PATH="/workspaces/docs2"
 
 
 export QUARTZ_REPO_URL="https://github.com/jackyzha0/quartz"
-export QUARTZ_REPO_BRANCH="main"
+export QUARTZ_REPO_BRANCH="v4"
 export QUARTZ_REPO_PATH="/workspaces/quartz"
 
 git clone --branch "$DOCS_REPO_BRANCH" "$DOCS_REPO_URL" $DOCS_REPO_PATH
