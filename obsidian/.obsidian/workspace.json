@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/otra prueba.md",
+                "file": "Kubernetes2/prueba tonta.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "otra prueba"
+              "title": "prueba tonta"
             }
           }
         ],
@@ -214,8 +214,11 @@
   },
   "active": "6171426736fbe2af",
   "lastOpenFiles": [
-    "Kubernetes/certificates.md",
     "Kubernetes/otra prueba.md",
+    "Kubernetes2/prueba tonta.md",
+    "Kubernetes2/Untitled",
+    "Kubernetes2",
+    "Kubernetes/certificates.md",
     "index.md",
     "Kubernetes/authorization.md",
     "Linux/Arch/test.md",
