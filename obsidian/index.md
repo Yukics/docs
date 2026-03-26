@@ -1,12 +1,6 @@
 ---
 title: Bienvenido
 ---
-# Welcome 
+Esta es mi documentación personal, la cual creo que puede serle de ayuda a alguien algún día. Y para obligarme a tenerla un poco mejor organizada.
 
-This is your new *vault*.
-
-Make a note of something, [[create a link]], or try [the Importer](https://help.obsidian.md/Plugins/Importer)!
-
-When you're ready, delete this note and make the vault your own.
-
-![Pasted image 20260326210151](https://i.gyazo.com/437567726c3b54577646d25c43282e2e.png)
+Os dejo por aquí mi [Github](https://github.com/Yukics) por si le quereis echar un vistazo.

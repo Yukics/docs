@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/authorization.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "authorization"
+              "title": "index"
             }
           }
         ],
@@ -214,11 +214,11 @@
   },
   "active": "6171426736fbe2af",
   "lastOpenFiles": [
+    "Kubernetes/authorization.md",
     "Linux/Arch/test.md",
     "Linux/Arch/index.md",
     "Kubernetes/etcd.md",
     "Kubernetes/certificates.md",
-    "Kubernetes/authorization.md",
     "assets/templates/template.md",
     "index.md",
     "GCP",
