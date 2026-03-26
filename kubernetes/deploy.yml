@@ -21,6 +21,9 @@ spec:
         volumeMounts:
         - name: docs-storage
           mountPath: /public
+        - name: nginx-config-volume
+          mountPath: /tmp/custom
+          subPath: quartz.config.ts
         envFrom:
         - configMapRef:
             name: docs-config

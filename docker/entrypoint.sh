@@ -20,5 +20,7 @@ git clone --branch "$QUARTZ_REPO_BRANCH" "$QUARTZ_REPO_URL" "$QUARTZ_REPO_PATH"
 cd "$QUARTZ_REPO_PATH"
 rm -rf "${QUARTZ_REPO_BUILD:?}"/* 2>/dev/null || true
 npm install
+mv quartz.config.ts quartz.config.ts.backup
+cp /tmp/custom/quartz.config.ts .
 npx quartz build -d "$DOCS_REPO_PATH/obsidian" -o "/tmp$QUARTZ_REPO_BUILD"
 mv "/tmp$QUARTZ_REPO_BUILD" "$QUARTZ_REPO_BUILD"
