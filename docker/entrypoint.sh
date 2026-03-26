@@ -15,7 +15,5 @@ git clone --branch "$DOCS_REPO_BRANCH" "$DOCS_REPO_URL" $DOCS_REPO_PATH
 git clone --branch "$QUARTZ_REPO_BRANCH" "$QUARTZ_REPO_URL" $QUARTZ_REPO_PATH
 
 cd $QUARTZ_REPO_PATH
-rm -rf $QUARTZ_REPO_PATH/content
 npm install
-mv $DOCS_REPO_PATH/obsidian $QUARTZ_REPO_PATH/content
-npx quartz create
+npx quartz create -d $DOCS_REPO_PATH/obsidian
