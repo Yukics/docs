@@ -21,7 +21,7 @@ data:
         analytics: {
           provider: "plausible",
         },
-        locale: "en-US",
+        locale: "es-ES",
         baseUrl: "docs.yukics.net",
         ignorePatterns: ["private", "templates", ".obsidian"],
         defaultDateType: "modified",
