@@ -17,7 +17,7 @@ configMapGenerator:
     literals:
       - DOCS_REPO_URL=https://github.com/Yukics/docs
       - DOCS_REPO_BRANCH=main
-      - DOCS_REPO_PATH=/docs2
+      - DOCS_REPO_PATH=/docs
       - QUARTZ_REPO_URL=https://github.com/jackyzha0/quartz
       - QUARTZ_REPO_BRANCH=v4
       - QUARTZ_REPO_PATH=/quartz
