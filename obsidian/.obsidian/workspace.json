@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/etcd.md",
+                "file": "Linux/Arch/test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "etcd"
+              "title": "test"
             }
           }
         ],
@@ -107,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299
+    "width": 332
   },
   "right": {
     "id": "4ec089f5c02d1d83",
@@ -214,14 +214,16 @@
   },
   "active": "6171426736fbe2af",
   "lastOpenFiles": [
+    "Linux/Arch/index.md",
+    "Linux/Arch/test.md",
+    "Kubernetes/etcd.md",
     "Kubernetes/Certificates.md",
     "Kubernetes/Authorization.md",
+    "assets/templates/template.md",
     "index.md",
-    "Linux/Arch/index.md",
     "GCP",
     "Linux/Arch as.md",
     "Linux/Arch",
-    "Kubernetes/etcd.md",
     "assets/Pasted image 20260117182635.png",
     "assets/Pasted image 20260117182604.png",
     "assets/Pasted image 20260117182433.png",
