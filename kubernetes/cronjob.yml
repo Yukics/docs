@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
           - name: build-docs
-            image: docker.io/yukics/quartz-job:20260326
+            image: docker.io/yukics/quartz-job:20260326v1
             imagePullPolicy: Always
             volumeMounts:
             - name: docs-storage
