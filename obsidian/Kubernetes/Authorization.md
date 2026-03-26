@@ -1,3 +1,6 @@
+---
+title: Authorization
+---
 # Node
 ![Pasted image 20260117181839](https://i.gyazo.com/14b73e5e1c54bd926771eb0337e32795.png)
 # RBAC

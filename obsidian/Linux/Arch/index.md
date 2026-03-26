@@ -1,3 +1,6 @@
+---
+title: Arch
+---
 https://wiki.archlinux.org/title/Installation_guide
 
 https://wiki.archlinux.org/title/Iwd#iwctl

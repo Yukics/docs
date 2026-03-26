@@ -1,3 +1,6 @@
+---
+title: Bienvenido
+---
 # Welcome 
 
 This is your new *vault*.

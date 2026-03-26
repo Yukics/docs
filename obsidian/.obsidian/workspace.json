@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Arch/index.md",
+                "file": "Kubernetes/etcd.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "etcd"
             }
           }
         ],
@@ -214,11 +214,13 @@
   },
   "active": "6171426736fbe2af",
   "lastOpenFiles": [
-    "Linux/Arch as.md",
-    "Linux/Arch/index.md",
-    "Linux/Arch",
-    "Kubernetes/Authorization.md",
     "Kubernetes/Certificates.md",
+    "Kubernetes/Authorization.md",
+    "index.md",
+    "Linux/Arch/index.md",
+    "GCP",
+    "Linux/Arch as.md",
+    "Linux/Arch",
     "Kubernetes/etcd.md",
     "assets/Pasted image 20260117182635.png",
     "assets/Pasted image 20260117182604.png",
@@ -230,7 +232,6 @@
     "assets/Pasted image 20260117173531.png",
     "assets/Pasted image 20260117171602.png",
     "assets/Pasted image 20260117171600.png",
-    "index.md",
     "Linux",
     "assets/templates",
     "Ansible",

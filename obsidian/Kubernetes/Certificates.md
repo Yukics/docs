@@ -1,3 +1,6 @@
+---
+title: Certificates
+---
 ![Pasted image 20260117171602](https://i.gyazo.com/5c8ca01879fb070f5e3a127459456653.png)
 
 | **Component**                                    | **Type**                                                    | **Certificate Path**                | **CN Name**                                   | **ALT Names**                                                                                                                                                                                  | **Organization**         | **Issuer**                              | **Expiration**                                               | **File Type**                                                                                                                  | **Purpose**                                                                                                 | **Description**                                                                                                             |

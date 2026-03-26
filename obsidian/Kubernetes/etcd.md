@@ -1,3 +1,6 @@
+---
+title: etcd
+---
 # etcd
 
 + etcdctl: manage over network
