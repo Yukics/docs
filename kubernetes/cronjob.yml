@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: docs-backup-cron
 spec:
-  schedule: "0 2 * * *"
+  schedule: "0 23 * * *"
   concurrencyPolicy: Forbid
   jobTemplate:
     spec:
