@@ -1,4 +1,42 @@
 apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: sec-headers-docs
+spec:
+  headers:
+    frameDeny: true
+    browserXssFilter: true
+    accessControlAllowMethods:
+      - "GET"
+      # - "OPTIONS"
+      # - "PUT"
+    accessControlAllowHeaders:
+      - "*"
+    accessControlAllowOriginList:
+      - "https://*.yukics.net"
+      - "https://*.yuki.es"
+    accessControlMaxAge: 100
+    addVaryHeader: true
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: ratelimit-docs
+spec:
+  rateLimit:
+    average: 20
+    period: 1s
+    burst: 40
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: inflightreq-docs
+spec:
+  inFlightReq:
+    amount: 10
+---
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: docs-ingressroute
@@ -10,12 +48,9 @@ spec:
   routes:
   - kind: Rule
     middlewares:
-      - name: test-ratelimit
-        namespace: kube-system
-    #   - name: test-inflightreq
-    #     namespace: kube-system
-      # - name: sec-headers
-      #   namespace: kube-system        
+      - name: ratelimit-docs
+      - name: inflightreq-docs
+      - name: sec-headers-docs
     match: Host(`docs.yukics.net`) || Host(`docs.yuki.es`)
     services:
     - kind: Service
