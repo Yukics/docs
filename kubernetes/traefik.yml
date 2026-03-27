@@ -9,7 +9,7 @@ spec:
     certResolver: letsencrypt
   routes:
   - kind: Rule
-    match: Host(`docs.yukics.net`)
+    match: Host(`docs.yukics.net`) || Host(`docs.yuki.es`)
     services:
     - kind: Service
       name: docs-nginx-service
