@@ -9,13 +9,13 @@ spec:
     certResolver: letsencrypt
   routes:
   - kind: Rule
-    # middlewares:
+    middlewares:
     #   - name: test-ratelimit
     #     namespace: kube-system
     #   - name: test-inflightreq
     #     namespace: kube-system
-      # - name: sec-headers
-      #   namespace: kube-system        
+      - name: sec-headers
+        namespace: kube-system        
     match: Host(`docs.yukics.net`) || Host(`docs.yuki.es`)
     services:
     - kind: Service
