@@ -15,6 +15,7 @@ spec:
     accessControlAllowOriginList:
       - "https://*.yukics.net"
       - "https://*.yuki.es"
+      - "https://static.cloudflareinsights.com"
     accessControlMaxAge: 100
     addVaryHeader: true
 ---
