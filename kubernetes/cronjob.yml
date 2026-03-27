@@ -10,17 +10,23 @@ spec:
       template:
         spec:
           containers:
-          - name: build-docs
+          - name: build-docs-job
             image: docker.io/yukics/quartz-job:20260326v1
-            imagePullPolicy: Always
+            imagePullPolicy: IfNotPresent
             volumeMounts:
             - name: docs-storage
               mountPath: /public
+            - name: nginx-config-volume
+              mountPath: /tmp/custom/quartz.config.ts
+              subPath: quartz.config.ts              
             envFrom:
             - configMapRef:
                 name: docs-config          
           restartPolicy: OnFailure
           volumes:
+          - name: nginx-config-volume
+            configMap:
+              name: nginx-config          
           - name: docs-storage
             persistentVolumeClaim:
               claimName: docs-pvc
