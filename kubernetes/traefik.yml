@@ -23,13 +23,13 @@ spec:
     stsIncludeSubdomains: true
     contentTypeNosniff: true
     # --- CSP y Referrer Policy ---
-    customResponseHeaders:
-      # Permite scripts de tus dominios y de Cloudflare
-      Content-Security-Policy: "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://*.yukics.net; style-src 'self' 'unsafe-inline';"
-      # Evita filtrar información de la URL de origen a otros sitios
-      Referrer-Policy: "strict-origin-when-cross-origin"
-      # Deshabilita funciones del navegador no deseadas (Cámara, Micro, etc)
-      Permissions-Policy: "camera=(), microphone=(), geolocation=()"
+    # customResponseHeaders:
+    #   # Permite scripts de tus dominios y de Cloudflare
+    #   Content-Security-Policy: "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://*.yukics.net https://*.yukics.es; style-src 'self' 'unsafe-inline';"
+    #   # Evita filtrar información de la URL de origen a otros sitios
+    #   Referrer-Policy: "strict-origin-when-cross-origin"
+    #   # Deshabilita funciones del navegador no deseadas (Cámara, Micro, etc)
+    #   Permissions-Policy: "camera=(), microphone=(), geolocation=()"
 ---
 apiVersion: traefik.io/v1alpha1
 kind: Middleware
