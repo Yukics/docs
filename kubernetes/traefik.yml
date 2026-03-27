@@ -14,6 +14,8 @@ spec:
         namespace: kube-system
       - name: test-inflightreq
         namespace: kube-system
+      - name: sec-headers
+        namespace: kube-system        
     match: Host(`docs.yukics.net`) || Host(`docs.yuki.es`)
     services:
     - kind: Service
