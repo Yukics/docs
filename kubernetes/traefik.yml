@@ -22,7 +22,7 @@ spec:
     stsSeconds: 31536000
     stsIncludeSubdomains: true
     contentTypeNosniff: true
-    --- CSP y Referrer Policy ---
+    # --- CSP y Referrer Policy ---
     customResponseHeaders:
       # Permite scripts de tus dominios y de Cloudflare
       Content-Security-Policy: "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://*.yukics.net https://*.yukics.es; style-src 'self' 'unsafe-inline';"
