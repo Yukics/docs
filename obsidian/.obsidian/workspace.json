@@ -41,16 +41,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/certificates.md",
+                "file": "Linux/Arch/Instalar core (vscode - oss).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "certificates"
+              "title": "Instalar core (vscode - oss)"
+            }
+          },
+          {
+            "id": "3072cfbd41f2aa60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/Arch/fastfetch.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "fastfetch"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -73,7 +87,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de archivos"
             }
           },
           {
@@ -203,22 +217,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
     }
   },
-  "active": "6171426736fbe2af",
+  "active": "3072cfbd41f2aa60",
   "lastOpenFiles": [
     "Kubernetes/authorization.md",
-    "Kubernetes/certificates.md",
-    "Linux/Arch/index.md",
-    "Linux/Arch/test.md",
     "index.md",
+    "Linux/Agregar entradas de escritorio.md",
+    "Linux/Arch/fastfetch.md",
+    "Linux/Arch/Instalar core (vscode - oss).md",
+    "Linux/Arch/ly - login manager.md",
+    "Linux/Arch/SSH.md",
+    "Linux/Arch/Hyper/wallpaper.md",
+    "Linux/Arch/test.md",
+    "Linux/Arch/Hyper",
+    "Linux/Arch/index.md",
+    "Kubernetes/certificates.md",
     "kubernetes2/prueba tonta.md",
     "Kubernetes/otra prueba.md",
     "Kubernetes2/Untitled",
