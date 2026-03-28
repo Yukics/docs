@@ -13,6 +13,12 @@
       "icon": "lucide-a-arrow-up",
       "name": "Shell commands: Execute: Publish",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-9il486ejjc",
+      "icon": "lucide-a-arrow-down",
+      "name": "Shell commands: Execute: Refresh",
+      "mode": "any"
     }
   ],
   "pageHeader": [],

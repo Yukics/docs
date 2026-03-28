@@ -1,0 +1,1 @@
+https://github.com/grafana/tempo/tree/main/operations/tempo-mixin/dashboards
