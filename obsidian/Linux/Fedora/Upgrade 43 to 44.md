@@ -40,3 +40,19 @@ Borrar claves de firma obsoletas:
 sudo dnf install clean-rpm-gpg-pubkey
 sudo clean-rpm-gpg-pubkey
 ```
+
+Eliminar enlaces simbolicos con referencias rotas:
+
+```bash
+sudo dnf install symlinks
+sudo symlinks -r /usr | grep dangling
+sudo symlinks -r -d /usr
+```
+
+Actualizar el kernel de rescate:
+
+```bash
+sudo rm /boot/*rescue*
+sudo kernel-install add "$(uname -r)" "/lib/modules/$(uname -r)/vmlinuz"
+sudo dnf install dracut-config-rescue
+```
