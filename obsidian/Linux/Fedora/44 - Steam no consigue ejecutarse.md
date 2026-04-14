@@ -9,3 +9,5 @@ Se soluciona con:
 ```bash
 sudo update-ca-trust extract --rhbz2387674
 ```
+
+Referencias: https://bugzilla.redhat.com/show_bug.cgi?id=2387674
