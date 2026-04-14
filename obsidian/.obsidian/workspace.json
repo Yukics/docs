@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Fedora/Upgrade 43 to 44.md",
+                "file": "Linux/Fedora/Steam no consigue ejecutarse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Upgrade 43 to 44"
+              "title": "Steam no consigue ejecutarse"
             }
           }
         ]
@@ -186,8 +186,9 @@
   },
   "active": "b19f5b741ca511dc",
   "lastOpenFiles": [
-    "Linux/Comandos útiles.md",
     "Linux/Fedora/Upgrade 43 to 44.md",
+    "Linux/Fedora/Steam no consigue ejecutarse.md",
+    "Linux/Comandos útiles.md",
     "Linux/Arch/Actualizar el SO.md",
     "Linux/Fedora",
     "Apps/Kafka/cheatsheet.md",
@@ -213,7 +214,6 @@
     "Apps/ZFS/state degraded.md",
     "Apps/Timeshift",
     "Apps/ZFS/agregar disco.md",
-    "Apps/vsCode/index.md",
     "Apps/ZFS",
     "Apps/vsCode",
     "Apps/Traefik",
