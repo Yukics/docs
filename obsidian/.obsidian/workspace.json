@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Fedora/Steam no consigue ejecutarse.md",
+                "file": "Linux/Fedora/44 - Steam no consigue ejecutarse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Steam no consigue ejecutarse"
+              "title": "44 - Steam no consigue ejecutarse"
             }
           }
         ]
@@ -187,7 +187,7 @@
   "active": "b19f5b741ca511dc",
   "lastOpenFiles": [
     "Linux/Fedora/Upgrade 43 to 44.md",
-    "Linux/Fedora/Steam no consigue ejecutarse.md",
+    "Linux/Fedora/44 - Steam no consigue ejecutarse.md",
     "Linux/Comandos útiles.md",
     "Linux/Arch/Actualizar el SO.md",
     "Linux/Fedora",
