@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Fedora/44 - Steam no consigue ejecutarse.md",
+                "file": "Linux/Fedora/podman not working gvproxy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "44 - Steam no consigue ejecutarse"
+              "title": "podman not working gvproxy"
             }
           }
         ]
@@ -186,8 +186,11 @@
   },
   "active": "b19f5b741ca511dc",
   "lastOpenFiles": [
-    "Linux/Fedora/Upgrade 43 to 44.md",
     "Linux/Fedora/44 - Steam no consigue ejecutarse.md",
+    "Linux/Fedora/podman not working gvproxy.md",
+    "Code/Go",
+    "Code",
+    "Linux/Fedora/Upgrade 43 to 44.md",
     "Linux/Comandos útiles.md",
     "Linux/Arch/Actualizar el SO.md",
     "Linux/Fedora",
@@ -213,7 +216,6 @@
     "Apps/Timeshift/index.md",
     "Apps/ZFS/state degraded.md",
     "Apps/Timeshift",
-    "Apps/ZFS/agregar disco.md",
     "Apps/ZFS",
     "Apps/vsCode",
     "Apps/Traefik",
@@ -221,8 +223,6 @@
     "Apps/Safeline WAF",
     "Apps/Redhat IDM",
     "Apps/Sin título.canvas",
-    "Apps/Python",
-    "Apps/Podman",
     "assets/Pasted image 20250126180444.png",
     "assets/Pasted image 20230322162049.png",
     "assets/Pasted image 20250223003644.png",
