@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Fedora/podman not working gvproxy.md",
+                "file": "Kubernetes/Recursos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "podman not working gvproxy"
+              "title": "Recursos"
             }
           }
         ]
@@ -186,8 +186,13 @@
   },
   "active": "b19f5b741ca511dc",
   "lastOpenFiles": [
-    "Linux/Fedora/44 - Steam no consigue ejecutarse.md",
+    "Otros recursos/Webs de referencia.md",
+    "Kubernetes/Recursos.md",
+    "Code/Go/gin",
+    "Code/Go/Gestión de la paquetería.md",
+    "Otros recursos",
     "Linux/Fedora/podman not working gvproxy.md",
+    "Linux/Fedora/44 - Steam no consigue ejecutarse.md",
     "Code/Go",
     "Code",
     "Linux/Fedora/Upgrade 43 to 44.md",
@@ -212,16 +217,11 @@
     "Linux/firewall-cmd.md",
     "Apps/Redhat IDM/revisar plugins.md",
     "Apps/Graylog/query.md",
-    "Apps/Redhat IDM/cambiar contraseña.md",
-    "Apps/Timeshift/index.md",
-    "Apps/ZFS/state degraded.md",
     "Apps/Timeshift",
     "Apps/ZFS",
     "Apps/vsCode",
     "Apps/Traefik",
     "Apps/Telegram",
-    "Apps/Safeline WAF",
-    "Apps/Redhat IDM",
     "Apps/Sin título.canvas",
     "assets/Pasted image 20250126180444.png",
     "assets/Pasted image 20230322162049.png",

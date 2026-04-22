@@ -1,0 +1,1 @@
+Enfocado a lo self hosted, es un tío que se ha pegado: https://geek-cookbook.funkypenguin.co.nz/
