@@ -28,7 +28,9 @@ spec:
               subPath: quartz.config.ts              
             envFrom:
             - configMapRef:
-                name: docs-config          
+                name: docs-config     
+            securityContext:
+              allowPrivilegeEscalation: false                     
           restartPolicy: OnFailure
           volumes:
           - name: nginx-config-volume

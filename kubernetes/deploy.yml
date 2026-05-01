@@ -35,6 +35,8 @@ spec:
         envFrom:
         - configMapRef:
             name: docs-config
+        securityContext:
+          allowPrivilegeEscalation: false            
       containers:
       - name: docs-nginx
         image: nginx:stable-alpine3.23-slim
@@ -63,6 +65,8 @@ spec:
         - name: docs-storage
           mountPath: /usr/share/nginx
           subPath: html
+        securityContext:
+          allowPrivilegeEscalation: false
       volumes:
       - name: nginx-config-volume
         configMap:
