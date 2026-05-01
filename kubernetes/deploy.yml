@@ -34,8 +34,6 @@ spec:
           subPath: quartz.config.ts
         - name: tmp-dir
           mountPath: /tmp
-        - name: home-dir
-          mountPath: /home/user   # ajusta al home del uid 1001 en tu imagen
         envFrom:
         - configMapRef:
             name: docs-config
