@@ -16,12 +16,10 @@ spec:
         app: docs-nginx
     spec:
       securityContext:
-        runAsNonRoot: true
-        runAsUser: 1001
-        runAsGroup: 1001
+        runAsNonRoot: false   # el init container necesita root, no podemos forzarlo aquí
         fsGroup: 1001
-        # fsGroupChangePolicy: "OnRootMismatch"
         fsGroupChangePolicy: "Always"
+        # fsGroupChangePolicy: "OnRootMismatch"
         seccompProfile:
           type: RuntimeDefault
       initContainers:
@@ -41,9 +39,16 @@ spec:
         envFrom:
         - configMapRef:
             name: docs-config
-        # securityContext:
-        #   allowPrivilegeEscalation: false
-        #   readOnlyRootFilesystem: true     
+        securityContext:
+          runAsUser: 0
+          runAsGroup: 0
+          runAsNonRoot: false
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: false
+          seccompProfile:
+            type: RuntimeDefault
+          capabilities:
+            drop: ["ALL"]
       containers:
       - name: docs-nginx
         image: nginx:stable-alpine3.23-slim
@@ -79,8 +84,15 @@ spec:
         - name: nginx-run
           mountPath: /var/run
         securityContext:
+          runAsNonRoot: true
+          runAsUser: 1001
+          runAsGroup: 1001
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
+          seccompProfile:
+            type: RuntimeDefault
+          capabilities:
+            drop: ["ALL"]
       volumes:
       - name: nginx-config-volume
         configMap:
