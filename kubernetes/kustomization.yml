@@ -8,6 +8,7 @@ resources:
   - pvc.yml
   - service.yml
   - traefik.yml
+  - networkpolicy.yml
 
 generatorOptions:
   disableNameSuffixHash: true
