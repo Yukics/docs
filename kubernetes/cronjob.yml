@@ -9,6 +9,12 @@ spec:
     spec:
       template:
         spec:
+          securityContext:
+            runAsNonRoot: false
+            fsGroup: 1001
+            fsGroupChangePolicy: "OnRootMismatch"
+        seccompProfile:
+          type: RuntimeDefault
           containers:
           - name: build-docs-job
             image: docker.io/yukics/quartz-job:20260326v1
@@ -23,15 +29,15 @@ spec:
             - configMapRef:
                 name: docs-config     
             securityContext:
-              runAsNonRoot: true
-              runAsUser: 1001
-              runAsGroup: 1001
-              fsGroup: 1001
-              fsGroupChangePolicy: "OnRootMismatch"
+              runAsUser: 0
+              runAsGroup: 0
+              runAsNonRoot: false
+              allowPrivilegeEscalation: false
+              readOnlyRootFilesystem: false
               seccompProfile:
                 type: RuntimeDefault
-              allowPrivilegeEscalation: false
-              readOnlyRootFilesystem: true                     
+              capabilities:
+                drop: ["ALL"]               
           restartPolicy: OnFailure
           volumes:
           - name: nginx-config-volume
