@@ -76,6 +76,7 @@ spec:
           subPath: default.conf
         - name: docs-storage
           mountPath: /public
+          subPath: public
         - name: tmp-dir
           mountPath: /tmp
         - name: nginx-cache
