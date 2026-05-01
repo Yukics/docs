@@ -103,12 +103,22 @@ data:
     export default config
 
   default.conf: |
+    http {
+      map $http_user_agent $excluded_ua {
+          ~kube-probe  0;
+          default      1;
+      }
+    }
+
     server {
         listen       8080;
         listen  [::]:8080;
         root /public/public;
         index index.html;
         error_page 404 /404.html;
+        
+        error_log /dev/stdout info;
+        access_log  /dev/stdout combined if=$excluded_ua;
 
         location / {
             try_files $uri $uri.html $uri/ =404;
