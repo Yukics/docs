@@ -9,6 +9,13 @@ spec:
     spec:
       template:
         spec:
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1001 # nginx uid
+            runAsGroup: 1001 # nginx gid
+            fsGroup: 1001 # nginx gid
+            seccompProfile:
+            type: RuntimeDefault
           containers:
           - name: build-docs-job
             image: docker.io/yukics/quartz-job:20260326v1
