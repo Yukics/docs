@@ -15,15 +15,15 @@ spec:
       labels:
         app: docs-nginx
     spec:
-      # securityContext:
-      #   runAsNonRoot: true
-      #   runAsUser: 1001
-      #   runAsGroup: 1001
-      #   fsGroup: 1001
-      #   # fsGroupChangePolicy: "OnRootMismatch"
-      #   fsGroupChangePolicy: "Always"
-      #   seccompProfile:
-      #     type: RuntimeDefault
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        runAsGroup: 1001
+        fsGroup: 1001
+        # fsGroupChangePolicy: "OnRootMismatch"
+        fsGroupChangePolicy: "Always"
+        seccompProfile:
+          type: RuntimeDefault
       initContainers:
       - name: build-docs
         image: docker.io/yukics/quartz-job:20260326v1
@@ -41,14 +41,9 @@ spec:
         envFrom:
         - configMapRef:
             name: docs-config
-        securityContext:
-          runAsNonRoot: true
-          runAsUser: 1001
-          runAsGroup: 1001
-          seccompProfile:
-            type: RuntimeDefault
-          allowPrivilegeEscalation: false
-          readOnlyRootFilesystem: true     
+        # securityContext:
+        #   allowPrivilegeEscalation: false
+        #   readOnlyRootFilesystem: true     
       containers:
       - name: docs-nginx
         image: nginx:stable-alpine3.23-slim
@@ -84,11 +79,6 @@ spec:
         - name: nginx-run
           mountPath: /var/run
         securityContext:
-          runAsNonRoot: true
-          runAsUser: 1001
-          runAsGroup: 1001
-          seccompProfile:
-            type: RuntimeDefault
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
       volumes:
