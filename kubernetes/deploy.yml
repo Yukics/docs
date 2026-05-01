@@ -15,6 +15,15 @@ spec:
       labels:
         app: docs-nginx
     spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        runAsGroup: 1001
+        fsGroup: 1001
+        # fsGroupChangePolicy: "OnRootMismatch"
+        fsGroupChangePolicy: "Always"
+        seccompProfile:
+          type: RuntimeDefault
       initContainers:
       - name: build-docs
         image: docker.io/yukics/quartz-job:20260326v1
@@ -25,6 +34,10 @@ spec:
         - name: nginx-config-volume
           mountPath: /tmp/custom/quartz.config.ts
           subPath: quartz.config.ts
+        - name: tmp-dir
+          mountPath: /tmp
+        - name: home-dir
+          mountPath: /home/user   # ajusta al home del uid 1001 en tu imagen
         envFrom:
         - configMapRef:
             name: docs-config
@@ -32,12 +45,10 @@ spec:
           runAsNonRoot: true
           runAsUser: 1001
           runAsGroup: 1001
-          fsGroup: 1001
-          fsGroupChangePolicy: "OnRootMismatch"
           seccompProfile:
             type: RuntimeDefault
           allowPrivilegeEscalation: false
-          readOnlyRootFilesystem: true        
+          readOnlyRootFilesystem: true     
       containers:
       - name: docs-nginx
         image: nginx:stable-alpine3.23-slim
@@ -66,12 +77,16 @@ spec:
         - name: docs-storage
           mountPath: /usr/share/nginx
           subPath: html
+        - name: tmp-dir
+          mountPath: /tmp
+        - name: nginx-cache
+          mountPath: /var/cache/nginx
+        - name: nginx-run
+          mountPath: /var/run
         securityContext:
           runAsNonRoot: true
           runAsUser: 1001
           runAsGroup: 1001
-          fsGroup: 1001
-          fsGroupChangePolicy: "OnRootMismatch"
           seccompProfile:
             type: RuntimeDefault
           allowPrivilegeEscalation: false
@@ -83,3 +98,11 @@ spec:
       - name: docs-storage
         persistentVolumeClaim:
           claimName: docs-pvc
+      - name: tmp-dir
+        emptyDir: {}
+      - name: home-dir
+        emptyDir: {}
+      - name: nginx-cache
+        emptyDir: {}
+      - name: nginx-run
+        emptyDir: {}
