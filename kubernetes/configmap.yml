@@ -106,7 +106,7 @@ data:
     server {
         listen       8080;
         listen  [::]:8080;
-        root /public;
+        root /public/public;
         index index.html;
         error_page 404 /404.html;
 
