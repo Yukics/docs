@@ -22,7 +22,7 @@ configMapGenerator:
       - QUARTZ_REPO_URL=https://github.com/jackyzha0/quartz
       - QUARTZ_REPO_BRANCH=v4
       - QUARTZ_REPO_PATH=/tmp/quartz
-      - QUARTZ_REPO_BUILD=/public/html
+      - QUARTZ_REPO_BUILD=/public
 
 # commonLabels:
 #   variant: base
