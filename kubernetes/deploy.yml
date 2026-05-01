@@ -18,8 +18,7 @@ spec:
       securityContext:
         runAsNonRoot: false   # el init container necesita root, no podemos forzarlo aquí
         fsGroup: 1001
-        fsGroupChangePolicy: "Always"
-        # fsGroupChangePolicy: "OnRootMismatch"
+        fsGroupChangePolicy: "OnRootMismatch"
         seccompProfile:
           type: RuntimeDefault
       initContainers:
