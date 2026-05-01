@@ -68,7 +68,7 @@ spec:
       name: docs-nginx-service
       namespace: docs
       passHostHeader: true
-      port: 80
+      port: 8080
     observability:
       accessLogs: true
       traceVerbosity: minimal
