@@ -54,6 +54,7 @@ metadata:
 spec:
   entryPoints:
     - websecure
+    - web
   tls:
     certResolver: letsencrypt
   routes:
