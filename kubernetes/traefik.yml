@@ -63,7 +63,7 @@ spec:
       - name: ratelimit-docs
       - name: inflightreq-docs
       - name: sec-headers-docs
-    match: Host(`docs.yukics.net`) || Host(`docs.yuki.es`) || Host(`wiki.yukics.net`)
+    match: Host(`docs.yukics.net`) || Host(`docs.yuki.es`) || HostRegexp(`wiki.*\.yukics\.net`)
     services:
     - kind: Service
       name: docs-nginx-service
