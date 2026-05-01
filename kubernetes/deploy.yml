@@ -15,15 +15,15 @@ spec:
       labels:
         app: docs-nginx
     spec:
-      securityContext:
-        runAsNonRoot: true
-        runAsUser: 1001
-        runAsGroup: 1001
-        fsGroup: 1001
-        # fsGroupChangePolicy: "OnRootMismatch"
-        fsGroupChangePolicy: "Always"
-        seccompProfile:
-          type: RuntimeDefault
+      # securityContext:
+      #   runAsNonRoot: true
+      #   runAsUser: 1001
+      #   runAsGroup: 1001
+      #   fsGroup: 1001
+      #   # fsGroupChangePolicy: "OnRootMismatch"
+      #   fsGroupChangePolicy: "Always"
+      #   seccompProfile:
+      #     type: RuntimeDefault
       initContainers:
       - name: build-docs
         image: docker.io/yukics/quartz-job:20260326v1
