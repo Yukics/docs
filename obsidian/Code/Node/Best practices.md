@@ -1,0 +1,1 @@
+Referencia: https://github.com/goldbergyoni/nodebestpractices?tab=readme-ov-file#translations
