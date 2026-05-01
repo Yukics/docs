@@ -50,11 +50,10 @@ spec:
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: docs-ingressroute
+  name: docs-ingressroute-websecure
 spec:
   entryPoints:
     - websecure
-    - web
   tls:
     certResolver: letsencrypt
   routes:
@@ -64,6 +63,30 @@ spec:
       - name: inflightreq-docs
       - name: sec-headers-docs
     match: Host(`docs.yukics.net`) || Host(`docs.yuki.es`) || HostRegexp(`wiki.*\.yukics\.net`)
+    services:
+    - kind: Service
+      name: docs-nginx-service
+      namespace: docs
+      passHostHeader: true
+      port: 8080
+    observability:
+      accessLogs: true
+      traceVerbosity: minimal
+---      
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: docs-ingressroute-web
+spec:
+  entryPoints:
+    - web
+  routes:
+  - kind: Rule
+    middlewares:
+      - name: ratelimit-docs
+      - name: inflightreq-docs
+      - name: sec-headers-docs
+    match: Host(`docs.yuki.es`)
     services:
     - kind: Service
       name: docs-nginx-service
