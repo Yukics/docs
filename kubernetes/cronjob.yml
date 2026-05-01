@@ -14,8 +14,9 @@ spec:
             runAsUser: 1001 # nginx uid
             runAsGroup: 1001 # nginx gid
             fsGroup: 1001 # nginx gid
+            fsGroupChangePolicy: "OnRootMismatch"
             seccompProfile:
-            type: RuntimeDefault
+              type: RuntimeDefault
           containers:
           - name: build-docs-job
             image: docker.io/yukics/quartz-job:20260326v1
