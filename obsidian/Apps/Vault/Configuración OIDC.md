@@ -1,3 +1,4 @@
+Referencia: https://developer.hashicorp.com/vault/docs/auth/jwt
 # Habilitamos OIDC
 
 ```bash
@@ -46,25 +47,28 @@ EOF
 
 ## Creación de role bindeando por grupo
 
-Si quieres mapear grupos de Dex a grupos de Vault, puedes usar el siguiente bloque de código:
-```bash
-vault write auth/oidc/role/default-user \
-	bound_audiences="vault" \
-	allowed_redirect_uris="https://vault.yuki.es/ui/vault/auth/oidc/oidc/callback" \
-	allowed_redirect_uris="http://localhost:8250/oidc/callback" \
-	user_claim="sub" \
-	oidc_scopes="openid,profile,email,groups" \
-	groups_claim="groups" \
-	policies="default" \
-	ttl="1h"
-```
-
-Creamos un grupo de Vault mapeado a la política de antes:
+Creamos un grupo de Vault mapeado a la política "admin" de antes:
 ```bash
 vault write identity/group \
 	name="admin-group" \
 	type="external" \
 	policies="admin"
+```
+
+Si quieres mapear grupos de Dex a grupos de Vault, puedes usar el siguiente bloque de código:
+```bash
+vault write auth/oidc/role/default-user -<<EOF
+{
+  "bound_audiences": "vault",
+  "user_claim": "sub",
+  "role_type": "oidc",
+  "allowed_redirect_uris": [ "https://vault.yuki.es/ui/vault/auth/oidc/oidc/callback","http://localhost:8250/oidc/callback"],
+  "oidc_scopes": ["openid", "profile", "email", "groups"],
+  "bound_claims": { "groups": ["identity/group/name/admin-group"] },
+  "policies": ["admin"],
+  "ttl": "1h"
+}
+EOF
 ```
 
 Por último mapeamos el grupo de Vault con el grupo del OIDC:
