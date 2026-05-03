@@ -34,3 +34,17 @@ FROM pg_stat_activity
 WHERE pg_stat_activity.datname = 'k3s' -- ← change this to your DB
   AND pid <> pg_backend_pid();
 ```
+
+# Backup de todas las BD
+
+Referencia: https://www.postgresql.org/docs/current/app-pg-dumpall.html
+```bash
+pg_dumpall -c -f /opt/backup/dump.out -v
+```
+
+# Restore desde backup pg_dumpall
+
+Es muy importante que si usamos el parámetro -c a la hora de hacer el backup, nos conectemos a la BD postgres, de lo contrario fallrá:
+```bash
+psql -X -f /opt/backup/dump.out -d postgres
+```
