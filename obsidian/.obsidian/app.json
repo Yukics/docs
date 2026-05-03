@@ -1,5 +1,6 @@
 {
   "attachmentFolderPath": "/assets",
   "newFileLocation": "current",
-  "promptDelete": false
+  "promptDelete": false,
+  "readableLineLength": false
 }
