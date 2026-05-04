@@ -55,14 +55,18 @@ spec:
   entryPoints:
     - websecure
   tls:
-    certResolver: letsencrypt
+    certResolver: vault
+    domains: 
+      - main: docs.yuki.es
+        sans:
+          - docs.diogenes.yuki.es
   routes:
   - kind: Rule
     middlewares:
       - name: ratelimit-docs
       - name: inflightreq-docs
       - name: sec-headers-docs
-    match: Host(`docs.yukics.net`) || Host(`docs.yuki.es`)
+    match: Host(`docs.yuki.es`)
     services:
     - kind: Service
       name: docs-nginx-service

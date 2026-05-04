@@ -7,3 +7,8 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm search repo bitnami
 ```
 
+# Si se queda colgado un delete
+
+```bash
+kubectl patch helmchart traefik -n kube-system --type merge -p '{"metadata":{"finalizers":null}}'
+```
