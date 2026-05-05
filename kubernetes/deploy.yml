@@ -46,6 +46,13 @@ spec:
             type: RuntimeDefault
           capabilities:
             drop: ["ALL"]
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
       containers:
       - name: docs-nginx
         image: nginx:stable-alpine3.23-slim
@@ -93,6 +100,13 @@ spec:
             type: RuntimeDefault
           capabilities:
             drop: ["ALL"]
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "100m"          
       volumes:
       - name: nginx-config-volume
         configMap:
