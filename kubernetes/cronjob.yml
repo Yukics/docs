@@ -5,8 +5,11 @@ metadata:
 spec:
   schedule: "0 2 * * *"
   concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 0  # Elimina el Job/Pod inmediatamente si tiene éxito
+  failedJobsHistoryLimit: 1      # Mantiene uno si falla para que puedas revisar logs
   jobTemplate:
     spec:
+      ttlSecondsAfterFinished: 60 # El Job y el Pod se borran 60 segundos después de terminar
       template:
         spec:
           securityContext:

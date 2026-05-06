@@ -21,7 +21,6 @@ spec:
         fsGroupChangePolicy: "OnRootMismatch"
         seccompProfile:
           type: RuntimeDefault
-   
       initContainers:
       - name: build-docs
         image: docker.io/yukics/quartz-job:20260326v1
@@ -79,12 +78,15 @@ spec:
         - name: nginx-config-volume
           mountPath: /etc/nginx/conf.d/default.conf
           subPath: default.conf
+          readOnly: true
         - name: nginx-config-volume
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
+          readOnly: true
         - name: docs-storage
           mountPath: /public
           subPath: public
+          readOnly: true
         - name: tmp-dir
           mountPath: /tmp
         - name: nginx-cache
