@@ -4,6 +4,7 @@ tags:
   - dex
   - tinyauth
   - kubernetes
+date: 2026-06-05
 ---
 # Introducción
 
