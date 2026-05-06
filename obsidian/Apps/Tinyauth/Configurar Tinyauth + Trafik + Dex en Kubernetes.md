@@ -7,12 +7,12 @@ tags:
 ---
 # Introducción
 
-Lo que vamos a implementar a continuación es una pieza que se va a encargar de implementar autenticación en cualquier servicio que necesitemos.
+Lo que vamos a implementar a continuación es una pieza que se va a encargar de implementar autenticación en cualquier servicio que necesitemos proteger.
 
-Vamos a crear las siguientes piezas:
-+ Dex: https://dex.yuki.es
-+ Tinyauth: https://auth.yuki.es
-+ Traefik Dashboard: https://traefik.yuki.es
++ Dex: https://dex.yuki.es -> OIDC
++ Tinyauth: https://auth.yuki.es -> Autenticación
++ Traefik -> Proxy
++ Traefik Dashboard: https://traefik.yuki.es -> Aplicación a proteger
 # Creamos el cliente en Dex
 
 Referencia: https://dexidp.io/docs/connectors/local/
