@@ -1,3 +1,7 @@
+---
+tags:
+  - minio
+---
 # Instalación
 # Monitorización
 

@@ -1,3 +1,9 @@
+---
+title: Timeshift
+tags:
+  - timeshift
+  - linux
+---
 ```
 [root@confucio watch]# apt install timeshift
 [root@confucio watch]# cat /etc/timeshift/timeshift.json

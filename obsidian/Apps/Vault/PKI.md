@@ -1,3 +1,7 @@
+---
+tags:
+  - vault
+---
 # Nuevo secret engine PKI
 Desde aquí puedes o bien generar una nueva rootCA o usar la que ya tenías pegandola/subiendola (rootCA.crt+rootCA.key) como un `.pem`.
 En este caso llamaremos a nuestro secret engine "pki"

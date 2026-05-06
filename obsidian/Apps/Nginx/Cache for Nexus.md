@@ -1,3 +1,8 @@
+---
+tags:
+  - nexus
+  - nginx
+---
 https://nginx.org/en/docs/http/ngx_http_proxy_module.html
 https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/#specify-which-requests-to-cache
 https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/

@@ -1,3 +1,10 @@
+---
+title:
+tags:
+  - ansible
+  - awx
+  - kubernetes
+---
 # Preparación SO
 ## Paquetería
 

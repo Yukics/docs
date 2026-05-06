@@ -1,3 +1,8 @@
+---
+title: CouchDB
+tags:
+  - couchdb
+---
 # CouchDB
 ## Backup and restore
 https://medium.com/@glynn_bird/how-i-do-couchdb-backups-e71360a5afa1

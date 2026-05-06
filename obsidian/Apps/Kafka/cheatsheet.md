@@ -1,5 +1,7 @@
-#init #tech 
-
+---
+tags:
+  - kafka
+---
 ## Comandos útiles
 ### List topics
 

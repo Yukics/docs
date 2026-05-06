@@ -1,3 +1,7 @@
+---
+tags:
+  - obsidian
+---
 ```yaml
 networks:
   net_traefik:

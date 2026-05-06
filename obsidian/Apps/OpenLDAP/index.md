@@ -1,5 +1,7 @@
-#init #tech 
-
+---
+tags:
+  - openldap
+---
 ## Referencias
 https://ubuntu.com/server/docs/service-ldap-backup-restore
 

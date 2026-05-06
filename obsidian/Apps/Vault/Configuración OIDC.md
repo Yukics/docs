@@ -1,3 +1,7 @@
+---
+tags:
+  - vault
+---
 Referencia: https://developer.hashicorp.com/vault/docs/auth/jwt
 # Habilitamos OIDC
 

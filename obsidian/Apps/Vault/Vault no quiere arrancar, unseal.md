@@ -1,3 +1,7 @@
+---
+tags:
+  - vault
+---
 Puede que en log, veamos algo similar a:
 ```
 2026-05-03T18:15:39.531115532+02:00 ==> Vault server configuration:
