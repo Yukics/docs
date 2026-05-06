@@ -1,3 +1,8 @@
+---
+title: Traefik
+tags:
+  - traefik
+---
 # Full config file
 ```yaml
 ## CODE GENERATED AUTOMATICALLY
