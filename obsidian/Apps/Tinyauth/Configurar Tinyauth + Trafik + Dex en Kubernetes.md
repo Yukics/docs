@@ -213,6 +213,15 @@ spec:
           sameSite: none
 ```
 
+# Referenciar middlewares de otros namespaces
+
+Para conseguir esto y poder aplicar el mismo middleware en varios IngressRoutes debemos configurar Traefik para permitir "crossnamespace":
+
+```yaml
+providers:
+  kubernetesCRD:
+    allowCrossNamespace: true
+```
 # Elementos relacionados
 + [[Apps/Traefik/index|Traefik]]
 + [[Apps/Dex/index|Dex]]
