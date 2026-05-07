@@ -222,6 +222,39 @@ providers:
   kubernetesCRD:
     allowCrossNamespace: true
 ```
+
+# Posibles problemas con crossorigins
+
+Cuando estaba haciendo pruebas con el dashboard de Traefik vi que habia ciertas llamadas que finalizaban en 404 a manifest.json resulta que cuando un `<link>` no tiene definido `crossorigin="use-credentials"` falla, porque realmente se está proxeando a través de Tinyauth con un dominio diferente.
+
+Para solucionarlo hemos tenido que crear un middleware con el plugin `rewritebody` oficial de Traefik.
+
+En la conf de Traefik habilitamos el plugin:
+
+```yaml
+experimental:
+  abortOnPluginFailure: false
+  plugins:
+    rewritebody:
+      moduleName: "github.com/traefik/plugin-rewritebody"
+      version: "v0.3.1"
+```
+
+Y en el middleware vamos agregando las reescrituras que necesitamos:
+
+```yaml
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: fix-manifest-credentials
+spec:
+  plugin:
+    rewritebody:
+      rewrites:
+        - regex: 'rel=\"manifest\"'
+          replacement: 'rel="manifest" crossorigin="use-credentials"'
+      lastModified: true
+```
 # Elementos relacionados
 + [[Apps/Traefik/index|Traefik]]
 + [[Apps/Dex/index|Dex]]
